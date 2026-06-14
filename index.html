@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Normativa del Staff — Constitución Oficial</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+  :root {
+    --gold:      #C9A84C;
+    --gold-light:#E8C97A;
+    --gold-dim:  #7A6130;
+    --ink:       #0D0C0A;
+    --parchment: #F5F0E8;
+    --parchment2:#EDE6D5;
+    --red:       #8B1A1A;
+    --line:      rgba(201,168,76,0.35);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #111009;
+    font-family: 'EB Garamond', Georgia, serif;
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* ── OUTER WRAPPER ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--parchment);
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,.03) 27px, rgba(0,0,0,.03) 28px),
+      linear-gradient(135deg, var(--parchment) 0%, var(--parchment2) 50%, var(--parchment) 100%);
+    position: relative;
+    padding: 0 0 80px;
+  }
+
+  /* aged edges */
+  .page::before {
+    content:'';
+    position:absolute; inset:0;
+    background: radial-gradient(ellipse at 0% 0%, rgba(0,0,0,.12) 0%, transparent 40%),
+                radial-gradient(ellipse at 100% 0%, rgba(0,0,0,.10) 0%, transparent 40%),
+                radial-gradient(ellipse at 0% 100%, rgba(0,0,0,.12) 0%, transparent 40%),
+                radial-gradient(ellipse at 100% 100%, rgba(0,0,0,.10) 0%, transparent 40%);
+    pointer-events:none;
+    z-index:1;
+  }
+
+  /* ── HEADER / PORTADA ── */
+  .cover {
+    background: linear-gradient(180deg, #1a1208 0%, #2b1f0a 60%, #1a1208 100%);
+    padding: 60px 60px 50px;
+    text-align: center;
+    border-bottom: 4px double var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,168,76,.15) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 30% at 50% 100%, rgba(201,168,76,.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .seal {
+    width: 90px; height: 90px;
+    margin: 0 auto 20px;
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 38px;
+    box-shadow: 0 0 0 6px rgba(201,168,76,.12), 0 0 30px rgba(201,168,76,.2);
+    position: relative; z-index:1;
+  }
+
+  .cover-eyebrow {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 14px;
+    position: relative; z-index:1;
+  }
+
+  .cover h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 900;
+    color: var(--gold-light);
+    line-height: 1.15;
+    text-shadow: 0 2px 20px rgba(0,0,0,.6);
+    letter-spacing: .05em;
+    position: relative; z-index:1;
+  }
+
+  .cover h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 400;
+    color: var(--gold-dim);
+    letter-spacing: .18em;
+    margin-top: 10px;
+    position: relative; z-index:1;
+  }
+
+  .divider-ornament {
+    display: flex; align-items: center; gap: 12px;
+    margin: 20px auto;
+    max-width: 400px;
+    position: relative; z-index:1;
+  }
+  .divider-ornament span { flex:1; height:1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .divider-ornament i { color: var(--gold); font-style: normal; font-size: 16px; }
+
+  .cover-meta {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: rgba(201,168,76,.5);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    position: relative; z-index:1;
+  }
+
+  /* ── CONTENT AREA ── */
+  .content {
+    padding: 0 60px;
+    position: relative; z-index:2;
+  }
+
+  /* ── PREAMBLE ── */
+  .preamble {
+    margin: 40px 0 36px;
+    padding: 28px 32px;
+    border-left: 4px solid var(--gold);
+    border-right: 4px solid var(--gold);
+    background: rgba(201,168,76,.05);
+    text-align: center;
+  }
+  .preamble-title {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .preamble p {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.7;
+    color: #2a2418;
+  }
+
+  /* ── CHAPTER HEADERS ── */
+  .chapter {
+    margin: 48px 0 8px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .chapter-line { flex:1; height:1px; background: var(--gold-dim); }
+  .chapter-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    white-space: nowrap;
+  }
+  .chapter-icon { font-size: 16px; }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ── ARTICLES ── */
+  .article {
+    margin-bottom: 18px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,.45);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+    page-break-inside: avoid;
+  }
+
+  .article:hover {
+    background: rgba(255,255,255,.65);
+  }
+
+  .article-num {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold-dim);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .article h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: .04em;
+  }
+
+  .article p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #2c2416;
+  }
+
+  .article ul {
+    margin-top: 6px;
+    padding-left: 18px;
+    list-style: none;
+  }
+  .article ul li {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #2c2416;
+    padding: 2px 0;
+    position: relative;
+  }
+  .article ul li::before {
+    content: '▸';
+    color: var(--gold-dim);
+    position: absolute;
+    left: -16px;
+    font-size: 10px;
+    top: 4px;
+  }
+
+  /* ── RANK CARDS ── */
+  .rank-grid { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+
+  .rank-card {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    background: rgba(255,255,255,.5);
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+  }
+  .rank-card.dept-fundacion { border-left-color: #C9A84C; }
+  .rank-card.dept-junta     { border-left-color: #9B59B6; }
+  .rank-card.dept-dev       { border-left-color: #2980B9; }
+  .rank-card.dept-ai        { border-left-color: #C0392B; }
+  .rank-card.dept-admin     { border-left-color: #27AE60; }
+  .rank-card.dept-mod       { border-left-color: #E67E22; }
+
+  .rank-name {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .rank-badge {
+    display: inline-block;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  .badge-fundacion { background: #8B6914; }
+  .badge-junta     { background: #7D3C98; }
+  .badge-dev       { background: #1A6692; }
+  .badge-ai        { background: #922B21; }
+  .badge-admin     { background: #1E8449; }
+  .badge-mod       { background: #CA6F1E; }
+
+  .rank-card p {
+    font-size: 14px;
+    color: #3a2f1e;
+    line-height: 1.6;
+  }
+
+  /* ── COMMAND TABLE ── */
+  .cmd-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 13.5px;
+  }
+  .cmd-table thead tr {
+    background: #2b1f0a;
+    color: var(--gold-light);
+  }
+  .cmd-table th {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .cmd-table tbody tr { border-bottom: 1px solid rgba(201,168,76,.15); }
+  .cmd-table tbody tr:nth-child(even) { background: rgba(201,168,76,.04); }
+  .cmd-table td { padding: 8px 12px; color: #2c2416; vertical-align: top; }
+  .cmd-table td:first-child {
+    font-family: 'Source Sans 3', monospace;
+    font-weight: 600;
+    color: var(--red);
+    white-space: nowrap;
+  }
+
+  /* ── WARNING BOXES ── */
+  .warning-box {
+    border: 1.5px solid var(--red);
+    background: rgba(139,26,26,.04);
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  .warning-box .wt {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .warning-box p { font-size: 14.5px; color: #2c2416; line-height: 1.6; }
+
+  .note-box {
+    border: 1.5px solid var(--gold-dim);
+    background: rgba(201,168,76,.06);
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  .note-box p { font-size: 14px; color: #3a2f1e; line-height: 1.6; font-style: italic; }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    margin: 56px 60px 0;
+    padding-top: 24px;
+    border-top: 2px double var(--gold-dim);
+    text-align: center;
+    position: relative; z-index:2;
+  }
+  .doc-footer p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #9a8260;
+    letter-spacing: .1em;
+    line-height: 1.9;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; }
+    .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ════════════════════════════════ PORTADA ════════════════════════════════ -->
+  <div class="cover">
+    <div class="seal">⚖️</div>
+    <p class="cover-eyebrow">Documento Oficial — Uso Exclusivo del Staff</p>
+    <h1>CONSTITUCIÓN Y NORMATIVA<br>DEL CUERPO DE STAFF</h1>
+    <h2>Reglamento Interno General</h2>
+    <div class="divider-ornament"><span></span><i>✦</i><span></span></div>
+    <p class="cover-meta">Edición Vigente &nbsp;·&nbsp; Todos los derechos reservados &nbsp;·&nbsp; Versión 1.0</p>
+  </div>
+
+  <div class="content">
+
+    <!-- ══════════════ PREÁMBULO ══════════════ -->
+    <div class="preamble">
+      <p class="preamble-title">— Preámbulo —</p>
+      <p>
+        Nosotros, el Staff de este servidor, con el fin de garantizar el orden, la equidad
+        y una experiencia de calidad para toda la comunidad, establecemos la presente
+        Constitución como ley suprema interna que rige el comportamiento, las funciones
+        y las responsabilidades de cada miembro del equipo, desde el rango más alto hasta
+        el de entrada. Toda persona que acepte un cargo de Staff acepta íntegramente este reglamento.
+      </p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO I — DISPOSICIONES GENERALES
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">📜</span>
+      <span class="chapter-title">Título I — Disposiciones Generales</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 1</p>
+      <h4>Propósito de la Normativa</h4>
+      <p>La presente Constitución regula la estructura, funciones, conducta y responsabilidades de todos los miembros del Staff. Su cumplimiento es obligatorio, irrenunciable y no admite excepciones salvo disposición expresa de la Fundación.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 2</p>
+      <h4>Definición de Staff</h4>
+      <p>Se considera miembro del Staff toda persona que ocupe un cargo reconocido dentro de la jerarquía oficial del servidor, desde <strong>Helper en Prueba</strong> hasta <strong>Owner</strong>. El ingreso al Staff implica la aceptación total e incondicional de este reglamento.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 3</p>
+      <h4>Principios Fundamentales</h4>
+      <p>Todo miembro del Staff deberá regir su conducta bajo los siguientes principios:</p>
+      <ul>
+        <li>Imparcialidad: tratar a todos los usuarios con igualdad, sin favoritismos.</li>
+        <li>Responsabilidad: responder por cada acción tomada en ejercicio de su cargo.</li>
+        <li>Profesionalismo: mantener en todo momento un trato respetuoso y formal.</li>
+        <li>Lealtad: al servidor, a la comunidad y a la jerarquía establecida.</li>
+        <li>Transparencia: actuar de manera honesta y documentar decisiones relevantes.</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 4</p>
+      <h4>Jerarquía Suprema</h4>
+      <p>La autoridad máxima del servidor recae en el <strong>Departamento de Fundación</strong> (Owner y Co-Owner). Ninguna decisión, norma o acción puede estar por encima de la voluntad de la Fundación. En ausencia de la Fundación, el Director General asumirá sus funciones de forma interina.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 5</p>
+      <h4>Confidencialidad</h4>
+      <p>Todo miembro del Staff está obligado a guardar absoluta confidencialidad sobre asuntos internos, decisiones internas de la jerarquía, sanciones aplicadas y datos personales de usuarios o compañeros. La filtración de información interna será causal de destitución inmediata.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 6</p>
+      <h4>Conducta Fuera del Servicio</h4>
+      <p>Incluso cuando un miembro del Staff no esté de servicio activo, deberá comportarse de manera acorde a su cargo. Las acciones fuera del servidor que afecten la reputación del mismo podrán ser sujeto de sanción interna.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO II — ESTRUCTURA Y JERARQUÍA
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">🏛️</span>
+      <span class="chapter-title">Título II — Estructura Jerárquica</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 7</p>
+      <h4>Estructura de Departamentos</h4>
+      <p>El Staff se organiza en seis departamentos, ordenados de mayor a menor autoridad:</p>
+      <ul>
+        <li>🏛️ Departamento de Fundación (Máxima autoridad)</li>
+        <li>🏢 Departamento de Junta Directiva (Alta gestión)</li>
+        <li>💻 Departamento de Developers (Área técnica)</li>
+        <li>🔎 Departamento de Asuntos Internos (Control y supervisión)</li>
+        <li>📊 Departamento de Administración (Gestión operativa)</li>
+        <li>🛠️ Departamento de Moderación (Primer contacto con usuarios)</li>
+      </ul>
+    </div>
+
+    <!-- RANGOS -->
+    <div class="article">
+      <p class="article-num">Artículo 8</p>
+      <h4>Rangos y Responsabilidades por Departamento</h4>
+      <p>A continuación se definen todos los rangos oficiales y sus funciones:</p>
+    </div>
+
+    <div class="rank-grid">
+
+      <!-- FUNDACIÓN -->
+      <div class="rank-card dept-fundacion">
+        <span class="rank-badge badge-fundacion">🏛️ Fundación</span>
+        <p class="rank-name">👑 Owner</p>
+        <p>Máxima autoridad absoluta del servidor. Tiene poder de decisión sobre cualquier aspecto, puede crear, modificar o derogar cualquier norma. Sus decisiones son irrevocables salvo por acuerdo mutuo entre Owners. Supervisa directamente al Co-Owner y a la Junta Directiva.</p>
+      </div>
+
+      <div class="rank-card dept-fundacion">
+        <span class="rank-badge badge-fundacion">🏛️ Fundación</span>
+        <p class="rank-name">👑 Co-Owner</p>
+        <p>Segunda autoridad máxima. Apoya al Owner en todas las decisiones estratégicas y puede actuar en su nombre cuando esté ausente. Aprueba o rechaza propuestas de ascenso provenientes de la Junta Directiva. Tiene acceso y voz sobre todos los departamentos.</p>
+      </div>
+
+      <!-- JUNTA DIRECTIVA -->
+      <div class="rank-card dept-junta">
+        <span class="rank-badge badge-junta">🏢 Junta Directiva</span>
+        <p class="rank-name">🎖️ Director General</p>
+        <p>Jefe de la Junta Directiva. Coordina y supervisa a todos los Directores de área. Solicita informes quincenales o mensuales a cada Director sobre actividades y eventos ocurridos en sus departamentos. Actúa en representación de la Fundación cuando esta no esté disponible. Toda acción tomada en ese rol es de su entera responsabilidad. Tiene poder de veto sobre decisiones de la Junta que no hayan sido aprobadas por la Fundación.</p>
+      </div>
+
+      <div class="rank-card dept-junta">
+        <span class="rank-badge badge-junta">🏢 Junta Directiva</span>
+        <p class="rank-name">👥 Director de Recursos Humanos</p>
+        <p>Gestiona todo lo relacionado con el personal: ingresos, salidas, expulsiones y baneos del Staff, siempre manteniendo informada a la Fundación de manera previa. Coordina junto al Director General la selección de candidatos a ascenso, evaluando desempeño e imparcialidad. Emite los ascensos una vez aprobados por el Despacho Superior. Todo proceso debe estar documentado.</p>
+      </div>
+
+      <div class="rank-card dept-junta">
+        <span class="rank-badge badge-junta">🏢 Junta Directiva</span>
+        <p class="rank-name">💻 Director de Developers</p>
+        <p>Dirige al equipo técnico del servidor. Supervisa el desarrollo, mantenimiento y actualización de sistemas. Reporta quincenalmente al Director General el estado de proyectos y avances técnicos. Aprueba o rechaza las tareas asignadas a Developers y Developers en Prueba.</p>
+      </div>
+
+      <div class="rank-card dept-junta">
+        <span class="rank-badge badge-junta">🏢 Junta Directiva</span>
+        <p class="rank-name">🔎 Director de Asuntos Internos</p>
+        <p>Lidera el departamento de Asuntos Internos. Garantiza la integridad y el buen comportamiento dentro del Staff a todos los niveles jerárquicos. Puede iniciar investigaciones sobre cualquier miembro del Staff, independientemente de su rango, previa notificación a la Fundación si el investigado pertenece a la Junta Directiva.</p>
+      </div>
+
+      <div class="rank-card dept-junta">
+        <span class="rank-badge badge-junta">🏢 Junta Directiva</span>
+        <p class="rank-name">📊 Director de Administración</p>
+        <p>Dirige el departamento de Administración. Supervisa a Administradores y resuelve situaciones complejas que no puedan ser gestionadas por rangos inferiores. Presenta informes periódicos de la gestión operativa al Director General.</p>
+      </div>
+
+      <div class="rank-card dept-junta">
+        <span class="rank-badge badge-junta">🏢 Junta Directiva</span>
+        <p class="rank-name">🛠️ Director de Moderación</p>
+        <p>Dirige el departamento de Moderación. Supervisa el desempeño de todos los Moderadores y Helpers. Establece los estándares de atención al usuario y vela por el cumplimiento de los protocolos de moderación. Reporta al Director General cualquier anomalía en su área.</p>
+      </div>
+
+      <!-- DEVELOPERS -->
+      <div class="rank-card dept-dev">
+        <span class="rank-badge badge-dev">💻 Developers</span>
+        <p class="rank-name">🧑‍💻 Developer</p>
+        <p>Desarrollador activo del servidor. Trabaja en el desarrollo, corrección de errores y mejoras técnicas. Reporta su progreso al Director de Developers. Puede colaborar con otros departamentos cuando sea requerido. Sus contribuciones deben estar documentadas.</p>
+      </div>
+
+      <div class="rank-card dept-dev">
+        <span class="rank-badge badge-dev">💻 Developers</span>
+        <p class="rank-name">🧑‍💻 Developer en Prueba</p>
+        <p>Desarrollador en período de evaluación. Realiza tareas asignadas bajo supervisión directa del Developer senior o del Director de Developers. Su permanencia depende del desempeño demostrado durante el período de prueba. No puede tomar decisiones técnicas de forma autónoma.</p>
+      </div>
+
+      <!-- ASUNTOS INTERNOS -->
+      <div class="rank-card dept-ai">
+        <span class="rank-badge badge-ai">🔎 Asuntos Internos</span>
+        <p class="rank-name">🛡️ Supervisor de Asuntos Internos</p>
+        <p>Lidera operativamente el equipo de Asuntos Internos. Dirige investigaciones, asigna casos a Oficiales y Suboficiales, y emite conclusiones al Director de Asuntos Internos. Tiene autoridad para monitorear a cualquier miembro del Staff de nivel inferior.</p>
+      </div>
+
+      <div class="rank-card dept-ai">
+        <span class="rank-badge badge-ai">🔎 Asuntos Internos</span>
+        <p class="rank-name">🛡️ Oficial de Asuntos Internos</p>
+        <p>Conduce investigaciones activas sobre posibles infracciones del Staff. Recopila pruebas, toma declaraciones y elabora informes para el Supervisor. Actúa con total imparcialidad y discreción en cada caso.</p>
+      </div>
+
+      <div class="rank-card dept-ai">
+        <span class="rank-badge badge-ai">🔎 Asuntos Internos</span>
+        <p class="rank-name">🛡️ Suboficial de Asuntos Internos</p>
+        <p>Apoya en investigaciones y tareas de vigilancia interna bajo la dirección del Oficial. Documenta comportamientos irregulares y los reporta oportunamente. Está en proceso de formación para asumir roles de mayor responsabilidad dentro del departamento.</p>
+      </div>
+
+      <!-- ADMINISTRACIÓN -->
+      <div class="rank-card dept-admin">
+        <span class="rank-badge badge-admin">📊 Administración</span>
+        <p class="rank-name">⚙️ Sr. Administrador</p>
+        <p>Administrador senior con experiencia demostrada. Gestiona casos complejos, puede usar todos los comandos de ERLC disponibles para su nivel, y apoya al Director de Administración. Puede supervisar a Administradores y Administradores Junior. Modera de manera completamente autónoma.</p>
+      </div>
+
+      <div class="rank-card dept-admin">
+        <span class="rank-badge badge-admin">📊 Administración</span>
+        <p class="rank-name">⚙️ Administrador</p>
+        <p>Gestiona situaciones operativas del día a día. Aplica sanciones, resuelve reportes complejos y apoya al equipo de Moderación cuando es necesario. Puede moderar de forma autónoma. Reporta al Sr. Administrador o al Director de Administración.</p>
+      </div>
+
+      <div class="rank-card dept-admin">
+        <span class="rank-badge badge-admin">📊 Administración</span>
+        <p class="rank-name">⚙️ Administrador Junior</p>
+        <p>Primera posición en el Departamento de Administración. Aprende las funciones administrativas bajo la guía del Administrador. Puede moderar de manera autónoma, pero deberá consultar al Administrador ante casos que excedan su experiencia. Sus acciones deben estar siempre justificadas.</p>
+      </div>
+
+      <!-- MODERACIÓN -->
+      <div class="rank-card dept-mod">
+        <span class="rank-badge badge-mod">🛠️ Moderación</span>
+        <p class="rank-name">🛡️ Sr. Moderador</p>
+        <p>Moderador senior con plena autonomía. Tiene acceso a los comandos de ERLC correspondientes a su nivel. Puede supervisar y orientar a Moderadores, Moderadores Junior y Helpers. Atiende reportes, aplica sanciones y escala casos complejos a Administración.</p>
+      </div>
+
+      <div class="rank-card dept-mod">
+        <span class="rank-badge badge-mod">🛠️ Moderación</span>
+        <p class="rank-name">🛡️ Moderador</p>
+        <p>Modera de forma completamente autónoma. Atiende reportes de usuarios, aplica sanciones proporcionales y documenta incidencias. Escala situaciones fuera de su alcance al Sr. Moderador o Administración. Es referencia directa para Moderadores Junior y Helpers.</p>
+      </div>
+
+      <div class="rank-card dept-mod">
+        <span class="rank-badge badge-mod">🛠️ Moderación</span>
+        <p class="rank-name">🛡️ Moderador Junior</p>
+        <p>Primer rango con capacidad de moderar de forma autónoma. Puede atender reportes, aplicar avisos y sanciones leves sin necesidad de supervisión directa. Sin embargo, ante casos complejos o dudosos, debe consultar a un Moderador o superior antes de actuar. Está en proceso de consolidar su criterio.</p>
+      </div>
+
+      <div class="rank-card dept-mod">
+        <span class="rank-badge badge-mod">🛠️ Moderación</span>
+        <p class="rank-name">🤝 Helper</p>
+        <p>Apoyo al equipo de moderación. <strong>Debe moderar siempre bajo supervisión de un Moderador Junior o superior.</strong> Puede orientar a usuarios, atender dudas básicas y asistir en situaciones menores, pero no puede aplicar sanciones de forma independiente. Toda acción debe ser validada por un superior.</p>
+      </div>
+
+      <div class="rank-card dept-mod">
+        <span class="rank-badge badge-mod">🛠️ Moderación</span>
+        <p class="rank-name">🤝 Helper en Prueba</p>
+        <p>Rango de entrada al Staff. <strong>No puede actuar de forma independiente bajo ninguna circunstancia.</strong> Debe estar acompañado y supervisado en todo momento por un Helper o rango superior. Su período de prueba sirve para evaluar su actitud, responsabilidad y adaptación a las normas del servidor.</p>
+      </div>
+
+    </div><!-- /rank-grid -->
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO III — AUTONOMÍA DE MODERACIÓN
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">⚖️</span>
+      <span class="chapter-title">Título III — Autonomía de Moderación</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 9</p>
+      <h4>Jerarquía de Autonomía</h4>
+      <p>La capacidad de moderar de forma independiente se define de la siguiente manera:</p>
+      <ul>
+        <li><strong>Moderación autónoma plena:</strong> Sr. Moderador, Moderador, Moderador Junior, Administradores, y rangos superiores.</li>
+        <li><strong>Moderación bajo supervisión:</strong> Helper y Helper en Prueba. Siempre deben contar con la presencia y validación de un Moderador Junior o superior.</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 10</p>
+      <h4>Obligación de Consultar</h4>
+      <p>El Moderador Junior, aunque puede actuar de manera autónoma, tiene la obligación de consultar a un rango superior en los siguientes casos:</p>
+      <ul>
+        <li>Situaciones que puedan derivar en un baneo permanente.</li>
+        <li>Conflictos que involucren a miembros del Staff.</li>
+        <li>Casos donde no exista precedente claro en esta normativa.</li>
+        <li>Disputas con usuarios que escalen de nivel.</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 11</p>
+      <h4>Responsabilidad de los Supervisores</h4>
+      <p>Los Moderadores y rangos superiores que supervisan a Helpers son corresponsables de las acciones tomadas bajo su supervisión. Si un Helper comete un error grave por falta de orientación del supervisor, ambos recibirán la amonestación correspondiente.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 12</p>
+      <h4>Progresión y Evaluación</h4>
+      <p>Los Helpers en Prueba y Helpers serán evaluados periódicamente. Los criterios de evaluación incluyen: actitud, cumplimiento de normas, desempeño en servicio, capacidad de trabajo en equipo y criterio ante situaciones complejas. El informe de evaluación deberá ser emitido al Director de Moderación.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO IV — COMANDOS DE ERLC
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">💻</span>
+      <span class="chapter-title">Título IV — Uso de Comandos ERLC</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 13</p>
+      <h4>Principio General de Comandos</h4>
+      <p>El uso de comandos de ERLC es una herramienta de servicio, no un privilegio personal. Todo comando ejecutado debe tener una justificación válida y proporcional. El abuso de comandos constituye una infracción grave sancionable con suspensión o destitución.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 14</p>
+      <h4>Comandos Permitidos Fuera de Uniforme (Fuera de Servicio)</h4>
+      <p>Existen comandos que, por su naturaleza no disruptiva, pueden ser utilizados fuera de servicio (sin uniforme). Estos son exclusivamente:</p>
+      <ul>
+        <li><strong>:kl</strong> — Kill/Logs: solo para verificación de información, nunca para hacer Staff activo.</li>
+        <li><strong>:logs</strong> — Revisión de registros: consulta informativa, no implica acción de moderación.</li>
+        <li><strong>:refresh</strong> — Solo cuando exista un bug técnico confirmado que lo justifique. No podrá usarse como herramienta de moderación encubierta ni para interferir en el rol activo del servidor.</li>
+      </ul>
+    </div>
+
+    <div class="warning-box">
+      <p class="wt">⚠️ Advertencia Importante</p>
+      <p>El uso de <strong>:refresh</strong> fuera de servicio solo está autorizado cuando exista un bug técnico que lo justifique. Utilizarlo para hacer Staff activo sin uniforme es una infracción directa a esta normativa y será sancionado.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 15</p>
+      <h4>Comandos que Requieren Uniforme (En Servicio)</h4>
+      <p>Todos los comandos que impliquen moderación activa de usuarios, aplicación de sanciones, ejecución de acciones en el servidor o cualquier forma de intervención en el rol, solo pueden ser utilizados estando debidamente uniformado y en servicio activo. Ejemplos incluyen:</p>
+      <ul>
+        <li>:ban / :kick / :mute y sus variantes.</li>
+        <li>:jail / :tp / :bring / :wanted.</li>
+        <li>:weather / :time y comandos de entorno.</li>
+        <li>Cualquier otro comando que afecte directamente el juego o a los jugadores.</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 16</p>
+      <h4>Registro de Comandos</h4>
+      <p>Todo uso de comando que derive en una sanción debe ser registrado. El Staff deberá conservar evidencia (capturas, logs) de las acciones tomadas, especialmente en casos de kick, ban o mute. Los registros podrán ser auditados por Asuntos Internos en cualquier momento.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 17</p>
+      <h4>Acceso a Comandos por Rango</h4>
+      <p>Los comandos disponibles para cada rango son asignados por el Departamento de Developers y aprobados por la Junta Directiva. Ningún miembro del Staff puede utilizar comandos que no correspondan a su nivel jerárquico, aun si técnicamente tiene acceso a ellos.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 18</p>
+      <h4>Comandos de Referencia Rápida</h4>
+      <table class="cmd-table">
+        <thead>
+          <tr>
+            <th>Comando</th>
+            <th>Función</th>
+            <th>¿Fuera de servicio?</th>
+            <th>Nivel mínimo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>:kl</td><td>Kill/Logs — revisión</td><td>✅ Sí (solo consulta)</td><td>Helper</td></tr>
+          <tr><td>:logs</td><td>Revisión de registros</td><td>✅ Sí (solo consulta)</td><td>Helper</td></tr>
+          <tr><td>:refresh</td><td>Recargar — solo por bug</td><td>✅ Solo si hay bug</td><td>Helper</td></tr>
+          <tr><td>:kick</td><td>Expulsar de sesión</td><td>❌ No — requiere uniforme</td><td>Moderador Junior</td></tr>
+          <tr><td>:ban</td><td>Banear usuario</td><td>❌ No — requiere uniforme</td><td>Moderador</td></tr>
+          <tr><td>:mute</td><td>Silenciar usuario</td><td>❌ No — requiere uniforme</td><td>Moderador Junior</td></tr>
+          <tr><td>:tp / :bring</td><td>Teletransportar</td><td>❌ No — requiere uniforme</td><td>Moderador Junior</td></tr>
+          <tr><td>:wanted</td><td>Marcar como buscado</td><td>❌ No — requiere uniforme</td><td>Moderador</td></tr>
+          <tr><td>:weather / :time</td><td>Entorno del servidor</td><td>❌ No — requiere uniforme</td><td>Sr. Moderador</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO V — UNIFORMES Y EQUIPAMIENTO
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">👔</span>
+      <span class="chapter-title">Título V — Uniformes, Accesorios y Vehículos</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 19</p>
+      <h4>Obligatoriedad del Uniforme</h4>
+      <p>Todo miembro del Staff que esté en servicio activo tiene la obligación de portar el uniforme oficial correspondiente a su rango y departamento. No está permitido realizar funciones de Staff sin uniforme, salvo los casos de uso de comandos no disruptivos expresamente autorizados en el Artículo 14.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 20</p>
+      <h4>Uniformes por Departamento</h4>
+      <p>Cada departamento tiene un uniforme oficial designado que distingue visualmente a sus miembros:</p>
+      <ul>
+        <li><strong>🏛️ Fundación:</strong> Uniforme de alta distinción, exclusivo y designado por los Owners. No replicable por ningún otro rango.</li>
+        <li><strong>🏢 Junta Directiva:</strong> Uniforme ejecutivo oficial designado. Distingue claramente la autoridad de gestión.</li>
+        <li><strong>💻 Developers:</strong> Uniforme técnico del departamento de desarrollo.</li>
+        <li><strong>🔎 Asuntos Internos:</strong> Uniforme de supervisión interna, discreto y diferenciado del resto del Staff.</li>
+        <li><strong>📊 Administración:</strong> Uniforme administrativo oficial con identificación de subrango.</li>
+        <li><strong>🛠️ Moderación:</strong> Uniforme de moderación estándar, con variaciones según subrango (Sr. Moderador, Moderador, Junior, Helper).</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 21</p>
+      <h4>Accesorios Reglamentarios</h4>
+      <p>Los accesorios en el personaje deben ser los establecidos para cada rango. No se permite el uso de accesorios que:</p>
+      <ul>
+        <li>Dificulten la identificación visual del rango o departamento.</li>
+        <li>Sean irrespetuosos, ofensivos o inadecuados para el servidor.</li>
+        <li>No correspondan al loadout oficial del departamento.</li>
+      </ul>
+      <p>El loadout de accesorios oficial es designado por la Junta Directiva y debe seguirse en todo momento durante el servicio.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 22</p>
+      <h4>Vehículos Reglamentarios</h4>
+      <p>Cada departamento y rango tiene asignado un vehículo oficial para el servicio. El Staff deberá utilizar únicamente el vehículo autorizado para su posición cuando esté en servicio. No se permite el uso de vehículos de otros departamentos sin autorización expresa.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 23</p>
+      <h4>Livery (Diseño de Vehículo)</h4>
+      <p>El livery (diseño visual aplicado al vehículo) de cada cargo es designado por el departamento correspondiente y aprobado por la Junta Directiva. Todo miembro en servicio debe portar el livery oficial de su rango en el vehículo asignado. Modificar el livery oficial sin autorización es una infracción sancionable.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 24</p>
+      <h4>Verificación del Equipamiento</h4>
+      <p>Asuntos Internos y los supervisores de cada departamento tienen la facultad de verificar en cualquier momento que el uniforme, accesorios, vehículo y livery de un miembro del Staff sean los correctos. El incumplimiento conllevará una advertencia formal y, de reiterarse, una sanción mayor.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO VI — ASCENSOS Y CAMBIOS DE RANGO
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">📈</span>
+      <span class="chapter-title">Título VI — Ascensos y Cambios de Departamento</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 25</p>
+      <h4>Proceso de Ascenso</h4>
+      <p>Los ascensos dentro del Staff siguen un proceso formal obligatorio:</p>
+      <ul>
+        <li>Los miembros de la Junta Directiva proponen candidatos que, según su criterio y evaluación de desempeño, merezcan un ascenso o cambio de departamento.</li>
+        <li>El Director General y el Director de Recursos Humanos revisan conjuntamente las propuestas, evaluando desempeño, actitud, responsabilidad e imparcialidad.</li>
+        <li>Los candidatos seleccionados son enviados al Despacho Superior (Fundación) para su aprobación final.</li>
+        <li>Una vez aprobados, el Director de Recursos Humanos ejecuta formalmente el ascenso o cambio.</li>
+        <li>Todo el proceso debe estar documentado.</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 26</p>
+      <h4>Criterios de Ascenso</h4>
+      <p>Para ser considerado candidato a ascenso, el miembro del Staff debe demostrar:</p>
+      <ul>
+        <li>Tiempo de servicio activo consistente en su rango actual.</li>
+        <li>Desempeño positivo avalado por sus superiores directos.</li>
+        <li>Cumplimiento íntegro de la normativa vigente.</li>
+        <li>Actitud profesional, imparcial y respetuosa.</li>
+        <li>Ausencia de sanciones activas o recientes.</li>
+        <li>Capacidad para asumir mayor responsabilidad.</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 27</p>
+      <h4>Cambio de Departamento</h4>
+      <p>Un miembro del Staff puede ser propuesto para un cambio de departamento si sus habilidades, aptitudes o necesidades del servidor lo justifican. El proceso sigue los mismos pasos que un ascenso estándar. Un cambio de departamento no implica necesariamente un ascenso de rango.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 28</p>
+      <h4>Prohibición de Autopromociones</h4>
+      <p>Ningún miembro del Staff puede solicitarse a sí mismo un ascenso de forma directa. La autopromoción informal, la presión indebida sobre superiores para obtener un ascenso o el uso de influencias externas para lograrlo son causales de sanción.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO VII — ASUNTOS INTERNOS
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">🔎</span>
+      <span class="chapter-title">Título VII — Asuntos Internos</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 29</p>
+      <h4>Jurisdicción de Asuntos Internos</h4>
+      <p>El Departamento de Asuntos Internos tiene jurisdicción sobre <strong>cualquier miembro del Staff</strong>, independientemente de su rango o departamento, para investigar posibles infracciones a esta normativa. Su autoridad es transversal a toda la estructura jerárquica.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 30</p>
+      <h4>Investigaciones sobre la Junta Directiva o Fundación</h4>
+      <p>Para iniciar una investigación sobre un miembro de la Junta Directiva, se requerirá notificación previa al Director General y a la Fundación. Para investigar a la propia Fundación, la solicitud debe ser aprobada por ambos Owners o Co-Owner con consenso explícito.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 31</p>
+      <h4>Obligación de Cooperar con Asuntos Internos</h4>
+      <p>Todo miembro del Staff tiene la obligación de cooperar con las investigaciones de Asuntos Internos. Negarse a proporcionar información, ocultar evidencia o interferir en una investigación se considerará una infracción grave, sancionable independientemente del resultado de la investigación original.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 32</p>
+      <h4>Confidencialidad de las Investigaciones</h4>
+      <p>Todas las investigaciones de Asuntos Internos son estrictamente confidenciales. Los involucrados en el proceso no podrán divulgar información sobre la investigación hasta que esta concluya y el departamento emita un comunicado oficial. La violación de esta confidencialidad es una infracción grave.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO VIII — CONDUCTA Y SANCIONES
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">⚠️</span>
+      <span class="chapter-title">Título VIII — Conducta y Régimen Sancionatorio</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 33</p>
+      <h4>Faltas Leves</h4>
+      <p>Constituyen faltas leves:</p>
+      <ul>
+        <li>No portar el uniforme reglamentario estando en servicio.</li>
+        <li>Uso de accesorios o vehículos no autorizados.</li>
+        <li>No reportar incidencias al superior correspondiente.</li>
+        <li>Ausentarse del servicio sin notificar al departamento.</li>
+        <li>Uso de lenguaje informal en canales oficiales del Staff.</li>
+      </ul>
+      <p>Sanción: Advertencia formal documentada.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 34</p>
+      <h4>Faltas Graves</h4>
+      <p>Constituyen faltas graves:</p>
+      <ul>
+        <li>Abuso de comandos de ERLC.</li>
+        <li>Uso de comandos fuera de las condiciones establecidas en el Artículo 14.</li>
+        <li>Discriminación, acoso o maltrato a usuarios o compañeros de Staff.</li>
+        <li>Filtración de información confidencial interna.</li>
+        <li>Negarse a cooperar con una investigación de Asuntos Internos.</li>
+        <li>Ejercer moderación sin uniforme cuando sea requerido.</li>
+        <li>Interferir en el proceso formal de ascensos.</li>
+      </ul>
+      <p>Sanción: Suspensión temporal del cargo, con posibilidad de degradación de rango.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 35</p>
+      <h4>Faltas Muy Graves</h4>
+      <p>Constituyen faltas muy graves:</p>
+      <ul>
+        <li>Corrupción, favoritismo deliberado o abuso de autoridad.</li>
+        <li>Falsificación de evidencias en procedimientos internos.</li>
+        <li>Acoso sistemático a miembros del Staff o usuarios.</li>
+        <li>Traición a la estructura jerárquica del servidor.</li>
+        <li>Filtración de información que cause daño directo al servidor.</li>
+        <li>Actuaciones que pongan en riesgo la imagen o integridad del servidor.</li>
+      </ul>
+      <p>Sanción: Destitución inmediata y baneo permanente del servidor, sin posibilidad de apelación salvo disposición de la Fundación.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 36</p>
+      <h4>Proceso Disciplinario</h4>
+      <p>Toda sanción debe seguir un proceso mínimo:</p>
+      <ul>
+        <li>Notificación al afectado de la infracción imputada.</li>
+        <li>Oportunidad de defensa ante el superior inmediato o Asuntos Internos.</li>
+        <li>Deliberación y emisión de resolución documentada.</li>
+        <li>Aplicación de la sanción correspondiente.</li>
+        <li>Registro oficial en el expediente del miembro del Staff.</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 37</p>
+      <h4>Derecho de Apelación</h4>
+      <p>Todo miembro del Staff tiene derecho a apelar una sanción ante el Director de su departamento o, en casos graves, directamente ante la Fundación. La apelación debe presentarse dentro de las 48 horas siguientes a la notificación de la sanción, con justificación escrita y pruebas si las hubiere.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 38</p>
+      <h4>Acumulación de Sanciones</h4>
+      <p>El sistema sancionatorio del Staff funciona de la siguiente manera:</p>
+      <ul>
+        <li>Cada <strong>3 advertencias</strong> acumuladas equivalen automáticamente a <strong>1 sanción formal</strong>.</li>
+        <li>Al acumular <strong>6 sanciones formales</strong>, el miembro del Staff será expulsado definitivamente del equipo y baneado del servidor, sin posibilidad de retorno salvo disposición expresa de la Fundación.</li>
+        <li>Las advertencias y sanciones son acumulativas en el tiempo y quedan registradas en el expediente del miembro.</li>
+        <li>La Fundación se reserva el derecho de aplicar el baneo de forma inmediata ante faltas muy graves, independientemente del contador de sanciones acumuladas.</li>
+      </ul>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO IX — INFORMES Y DOCUMENTACIÓN
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">📋</span>
+      <span class="chapter-title">Título IX — Informes y Documentación Interna</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 39</p>
+      <h4>Informes Departamentales Periódicos</h4>
+      <p>Cada Director de área deberá presentar al Director General un informe quincenal o mensual que incluya:</p>
+      <ul>
+        <li>Resumen de actividades del departamento.</li>
+        <li>Incidencias relevantes ocurridas.</li>
+        <li>Estado del personal a su cargo.</li>
+        <li>Propuestas de mejora o acciones pendientes.</li>
+        <li>Candidatos para ascenso o cambio, si aplica.</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 40</p>
+      <h4>Documentación de Sanciones</h4>
+      <p>Toda sanción aplicada a un usuario o miembro del Staff debe quedar documentada con: fecha, motivo, evidencias recopiladas, rango del Staff que ejecutó la acción y aprobación del superior cuando corresponda. La documentación es obligatoria sin excepción.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 41</p>
+      <h4>Expediente del Staff</h4>
+      <p>Cada miembro del Staff tendrá un expediente interno gestionado por el Departamento de Recursos Humanos que incluirá su historial de desempeño, sanciones recibidas, ascensos obtenidos y observaciones de Asuntos Internos. Este expediente es de acceso restringido.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO X — DISPONIBILIDAD Y ACTIVIDAD
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">🕐</span>
+      <span class="chapter-title">Título X — Actividad y Disponibilidad</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 42</p>
+      <h4>Mínimo de Actividad</h4>
+      <p>Todo miembro del Staff deberá mantener una actividad mínima consistente con su cargo. La inactividad prolongada sin justificación será evaluada por el Director del departamento correspondiente y podrá derivar en degradación de rango o remoción del Staff, según la duración y las circunstancias.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 43</p>
+      <h4>Ausencias Justificadas</h4>
+      <p>Las ausencias temporales deben ser notificadas con anticipación al Director del departamento correspondiente, indicando la duración estimada. La notificación debe hacerse antes del inicio de la ausencia salvo circunstancias de fuerza mayor, en cuyo caso debe comunicarse a la brevedad posible.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 44</p>
+      <h4>Inactividad No Justificada</h4>
+      <p>La inactividad de más de siete (7) días sin comunicación al departamento será considerada abandono de cargo. El Director de Recursos Humanos, previa notificación al Director General, podrá proceder a la remoción del cargo. La reintegración posterior estará sujeta a evaluación.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO XI — RELACIÓN CON LOS USUARIOS
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">🤝</span>
+      <span class="chapter-title">Título XI — Relación con los Usuarios</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 45</p>
+      <h4>Trato al Usuario</h4>
+      <p>Todo miembro del Staff debe tratar a los usuarios con respeto, educación y profesionalismo en todo momento, independientemente de la situación. El mal trato, humillación o discriminación hacia un usuario es una infracción grave conforme al Artículo 34.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 46</p>
+      <h4>Imparcialidad con Usuarios</h4>
+      <p>Ningún miembro del Staff puede dar trato preferencial a un usuario por relaciones personales, amistad, ni aplicar sanciones motivadas por antipatías personales. La imparcialidad es un principio fundamental e irrenunciable de este reglamento.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 47</p>
+      <h4>Atención de Reportes</h4>
+      <p>Los reportes de usuarios deben ser atendidos a la brevedad posible. El Staff presente en el servidor tiene la obligación de atender un reporte activo en la medida de sus posibilidades. La dejadez deliberada en la atención de reportes es sancionable como falta leve reiterada o falta grave.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 48</p>
+      <h4>Proporcionalidad de Sanciones a Usuarios</h4>
+      <p>Las sanciones aplicadas a usuarios deben ser proporcionales a la falta cometida. Se prohíbe banear o kickear a un usuario por motivos triviales. Ante la duda sobre la gravedad de una infracción, el miembro del Staff debe consultar a un superior antes de actuar.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         TÍTULO XII — DISPOSICIONES FINALES
+    ══════════════════════════════════════════════ -->
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <span class="chapter-icon">📌</span>
+      <span class="chapter-title">Título XII — Disposiciones Finales</span>
+      <div class="chapter-line"></div>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 49</p>
+      <h4>Supremacía de la Fundación</h4>
+      <p>Esta Constitución está por encima de cualquier norma, acuerdo verbal o costumbre interna. Sin embargo, la Fundación tiene la facultad de emitir disposiciones especiales que, por su naturaleza urgente o excepcional, prevalezcan temporalmente sobre artículos específicos de este reglamento, debiendo posteriormente formalizar los cambios en el texto constitucional.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 50</p>
+      <h4>Modificaciones a la Normativa</h4>
+      <p>Solo la Fundación, con el apoyo del Director General y el Director de Recursos Humanos, puede proponer y aprobar modificaciones a esta Constitución. Cualquier cambio debe ser comunicado formalmente a todos los miembros del Staff antes de entrar en vigor, con un plazo mínimo de 24 horas de anticipación.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 51</p>
+      <h4>Desconocimiento de la Norma</h4>
+      <p>El desconocimiento de esta Constitución no exime de su cumplimiento. Todo miembro del Staff, al aceptar su cargo, declara haber leído, comprendido y aceptado íntegramente el presente reglamento. La ignorancia de una norma no será válida como defensa ante un proceso disciplinario.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 52</p>
+      <h4>Lagunas Normativas</h4>
+      <p>Ante situaciones no previstas en esta Constitución, la decisión corresponderá al miembro del Staff presente con el mayor rango jerárquico, quien deberá actuar bajo los principios fundamentales del Artículo 3. Dicha decisión deberá ser reportada inmediatamente a la Junta Directiva para su evaluación y posible incorporación a la normativa.</p>
+    </div>
+
+    <div class="article">
+      <p class="article-num">Artículo 53</p>
+      <h4>Entrada en Vigor</h4>
+      <p>La presente Constitución entra en vigor en el momento de su publicación oficial por parte de la Fundación y es de cumplimiento inmediato para todos los miembros del Staff activos y futuros.</p>
+    </div>
+
+    <div class="note-box">
+      <p>Esta Constitución ha sido redactada para garantizar el correcto funcionamiento del servidor, la protección de la comunidad y el desarrollo justo y organizado de cada miembro del Staff. Su respeto es la base de todo lo que somos como equipo.</p>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- ══════ FOOTER ══════ -->
+  <div class="doc-footer">
+    <p>🏛️ Constitución Oficial del Staff &nbsp;·&nbsp; Versión 1.0</p>
+    <p>Documento de uso exclusivo e interno — Prohibida su distribución externa</p>
+    <p>Aprobado por el Departamento de Fundación &nbsp;·&nbsp; Vigente desde su publicación oficial</p>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
+
